@@ -1,0 +1,74 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: var(--z-modal);
+}
+
+.modal {
+    background-color: var(--draftly-card);
+    width: 90%;
+    max-width: 500px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    color: var(--notion-text);
+}
+
+.header {
+    padding: var(--space-md);
+    border-bottom: 1px solid var(--notion-border);
+}
+
+.header h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.section {
+    padding: var(--space-lg);
+}
+
+.section h3 {
+    font-size: 14px;
+    color: var(--draftly-subtext);
+    text-transform: uppercase;
+    margin-bottom: var(--space-md);
+    font-weight: 500;
+}
+
+.control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select {
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--notion-border);
+    background: var(--draftly-bg);
+    color: var(--notion-text);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.footer {
+    padding: var(--space-md);
+    border-top: 1px solid var(--notion-border);
+    text-align: right;
+}
+
+.closeButton {
+    color: var(--draftly-blue);
+    font-weight: 600;
+    font-size: 16px;
+}

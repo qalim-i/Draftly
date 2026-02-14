@@ -1,0 +1,116 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 8px 16px 8px;
+}
+
+.monthSelector {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.monthName {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--draftly-text);
+}
+
+.yearName {
+    font-size: 16px;
+    color: var(--draftly-subtext);
+}
+
+.navButtons button {
+    font-size: 18px;
+    padding: 8px 12px;
+    color: var(--draftly-subtext);
+    transition: color 0.2s;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.navButtons button:hover {
+    color: var(--draftly-blue);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    flex-shrink: 0;
+    margin-bottom: 0;
+    /* Managed by parent gap */
+}
+
+.weekDayHeader {
+    text-align: center;
+    font-size: 12px;
+    color: var(--draftly-subtext);
+    padding-bottom: 8px;
+    font-weight: 600;
+}
+
+.day {
+    min-height: 48px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.disabled {
+    color: #D1D1D6;
+}
+
+.selected {
+    background-color: #ECECEC;
+    color: var(--draftly-text);
+}
+
+.today .dayNumber {
+    color: var(--draftly-blue);
+    font-weight: 700;
+}
+
+.dotContainer {
+    display: flex;
+    gap: 2px;
+    margin-top: 4px;
+    height: 6px;
+    align-items: center;
+    justify-content: center;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--draftly-subtext);
+}
+
+.dot.complete {
+    background-color: var(--draftly-blue);
+    width: 6px;
+    height: 6px;
+}
+
+.dot.partial {
+    background-color: #FF9500;
+    /* Orange for partial */
+}
+
+/* Optional: Checkmark for 100% days */
+.checkmark {
+    font-size: 10px;
+    color: var(--draftly-blue);
+    line-height: 1;
+}

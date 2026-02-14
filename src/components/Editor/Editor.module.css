@@ -1,0 +1,145 @@
+.editorContainer {
+    padding: 60px 120px;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .editorContainer {
+        padding: 60px 16px;
+        /* Significantly reduced padding for mobile */
+        max-width: 100%;
+    }
+}
+
+.blockWrapper {
+    margin: 4px 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.block {
+    width: 100%;
+    outline: none;
+    min-height: 24px;
+    line-height: 1.5;
+}
+
+.block:empty:before {
+    content: attr(data-placeholder);
+    color: #a9a8a8;
+    pointer-events: none;
+}
+
+.heading1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    margin-top: 16px;
+}
+
+.heading2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.text {
+    font-size: 16px;
+    color: var(--notion-text);
+}
+
+/* List Styles */
+.listWrapper {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.listMarker {
+    flex-shrink: 0;
+    width: 24px;
+    margin-right: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    user-select: none;
+    color: var(--notion-text);
+}
+
+.listContent {
+    flex: 1;
+    min-height: 24px;
+    outline: none;
+    line-height: 1.5;
+}
+
+.bullet {
+    font-size: 1.5em;
+    line-height: 1;
+    margin-top: -2px;
+}
+
+.number {
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+/* Slash Menu */
+.slashMenu {
+    position: fixed;
+    z-index: var(--z-overlay);
+    background: var(--draftly-card);
+    width: 240px;
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    padding: 6px 0;
+    border: 1px solid var(--notion-border);
+    animation: fadeIn 0.1s ease-out;
+}
+
+.slashItem {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--notion-text);
+    text-align: left;
+}
+
+.slashItem:hover,
+.slashItemActive {
+    background-color: var(--notion-hover);
+}
+
+.slashIcon {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--draftly-subtext);
+    font-size: 12px;
+    border: 1px solid var(--notion-border);
+    border-radius: 4px;
+    background: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

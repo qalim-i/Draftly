@@ -1,0 +1,109 @@
+.sidebar {
+    width: 240px;
+    background-color: var(--notion-sidebar);
+    border-right: 1px solid var(--notion-border);
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0;
+    color: var(--notion-text);
+    font-size: 14px;
+}
+
+.header {
+    padding: 0 16px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.02);
+    }
+}
+
+.userIcon {
+    width: 20px;
+    height: 20px;
+    background: #E1E1E1;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.nav {
+    flex: 1;
+    padding: 0 4px;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: rgba(55, 53, 47, 0.65);
+    font-weight: 500;
+    transition: background 100ms ease;
+
+    &:hover {
+        background-color: var(--notion-hover);
+        color: var(--notion-text);
+    }
+}
+
+.navItem.active {
+    background-color: var(--notion-hover);
+    color: var(--notion-text);
+    font-weight: 600;
+}
+
+.icon {
+    font-size: 16px;
+    width: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    padding: 8px 4px 0;
+    border-top: 1px solid var(--notion-border);
+}
+
+/* Resizer Handle */
+/* Resizer Removed */
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        z-index: var(--z-modal);
+        box-shadow: var(--shadow-lg);
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .mobileOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: var(--z-overlay);
+        animation: fadeIn 0.2s ease-out;
+    }
+
+
+}

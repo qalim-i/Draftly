@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--notion-bg);
+}
+
+.main {
+    flex: 1;
+    overflow: hidden;
+    /* Each view handles its own scroll */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* For toggle positioning context if needed */
+}
+
+.mobileToggle {
+    display: none;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 5;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--notion-text);
+    padding: 4px;
+    border-radius: 4px;
+
+    &:hover {
+        background: var(--notion-hover);
+    }
+}
+
+@media (max-width: 768px) {
+    .mobileToggle {
+        display: block;
+    }
+}

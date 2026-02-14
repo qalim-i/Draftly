@@ -1,0 +1,135 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--draftly-bg);
+    color: var(--draftly-text);
+    font-family: var(--font-main);
+    padding: 16px;
+    gap: 20px;
+}
+
+.calendarSection {
+    flex-shrink: 0;
+}
+
+.agendaSection {
+    flex: 1;
+    background-color: var(--draftly-card);
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow-y: auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.agendaHeader {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--draftly-subtext);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.habitList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.habitItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: var(--draftly-bg);
+    border-radius: 12px;
+    transition: opacity 0.2s;
+}
+
+.habitItem.completed {
+    opacity: 0.6;
+}
+
+.habitInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.habitIcon {
+    font-size: 20px;
+}
+
+.habitTitle {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.checkButton {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid var(--draftly-subtext);
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    color: white;
+}
+
+.checkButton.checked {
+    background-color: var(--draftly-blue);
+    border-color: var(--draftly-blue);
+}
+
+.addButton {
+    background: var(--draftly-blue);
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emptyState {
+    text-align: center;
+    color: var(--draftly-subtext);
+    margin-top: 32px;
+}
+
+.addInputContainer {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.addInput {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.cancelButton {
+    background: transparent;
+    color: var(--draftly-subtext);
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}

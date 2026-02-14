@@ -1,0 +1,275 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--draftly-bg);
+    color: var(--draftly-text);
+    font-family: var(--font-main);
+    padding: 16px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 8px 16px 8px;
+}
+
+.monthSelector {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.monthName {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--draftly-text);
+}
+
+.yearName {
+    font-size: 16px;
+    color: var(--draftly-subtext);
+}
+
+.navButtons button {
+    font-size: 18px;
+    padding: 8px 12px;
+    color: var(--draftly-subtext);
+    transition: color 0.2s;
+}
+
+.navButtons button:hover {
+    color: var(--draftly-blue);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    /* Remove flex: 1 to ensure it takes only needed space, or use specific logic */
+    flex-shrink: 0;
+    margin-bottom: 20px;
+}
+
+.weekDayHeader {
+    text-align: center;
+    font-size: 12px;
+    color: var(--draftly-subtext);
+    padding-bottom: 8px;
+    font-weight: 600;
+}
+
+.day {
+    min-height: 48px;
+    /* Fixed minimum height */
+    height: auto;
+    /* Allow auto height based on content */
+    aspect-ratio: auto;
+    /* Ensure aspect ratio doesn't force height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ... (disabled, selected styles) ... */
+.disabled {
+    color: #D1D1D6;
+}
+
+.selected {
+    background-color: #ECECEC;
+    color: var(--draftly-text);
+}
+
+.today .dayNumber {
+    color: var(--draftly-blue);
+    font-weight: 700;
+}
+
+.eventDots {
+    display: flex;
+    gap: 2px;
+    margin-top: 4px;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--draftly-subtext);
+}
+
+.agenda {
+    flex: 1;
+    /* Take remaining space */
+    background-color: var(--draftly-card);
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow-y: auto;
+    /* Scroll internally */
+    min-height: 0;
+    /* Crucial for flex scrolling */
+}
+
+.agendaHeader {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--draftly-subtext);
+}
+
+.eventList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.eventItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: var(--draftly-bg);
+    border-radius: 12px;
+}
+
+.eventInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.eventTitle {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.eventTime {
+    font-size: 12px;
+    color: var(--draftly-subtext);
+}
+
+.syncButton {
+    font-size: 12px;
+    color: var(--draftly-blue);
+    background: rgba(0, 122, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.addEventButton {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--draftly-blue);
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 50%;
+    transition: background 0.2s;
+    float: right;
+    /* Quick align to right */
+    line-height: 1;
+}
+
+.addEventButton:hover {
+    background: rgba(0, 122, 255, 0.1);
+}
+
+/* Modal Styles */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: var(--z-modal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.modalContent {
+    background: var(--draftly-card);
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: var(--shadow-lg);
+    color: var(--draftly-text);
+}
+
+.modalTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.inputGroup {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    font-size: 14px;
+    color: var(--draftly-subtext);
+    font-weight: 500;
+}
+
+.input,
+.textarea {
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid var(--notion-border);
+    background: var(--draftly-bg);
+    color: var(--draftly-text);
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+}
+
+.textarea {
+    resize: none;
+    min-height: 80px;
+}
+
+.modalActions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.cancelButton,
+.saveButton {
+    flex: 1;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cancelButton {
+    background: var(--draftly-bg);
+    color: var(--draftly-text);
+}
+
+.saveButton {
+    background: var(--draftly-blue);
+    color: white;
+}

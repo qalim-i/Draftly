@@ -1,0 +1,41 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-main);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.primary {
+    background-color: var(--draftly-blue);
+    color: white;
+}
+
+.primary:hover {
+    opacity: 0.9;
+}
+
+.secondary {
+    background-color: transparent;
+    color: var(--notion-text);
+    border-color: var(--notion-border);
+}
+
+.secondary:hover {
+    background-color: var(--notion-hover);
+}
+
+.ghost {
+    background-color: transparent;
+    color: var(--notion-text);
+}
+
+.ghost:hover {
+    background-color: var(--notion-hover);
+}
