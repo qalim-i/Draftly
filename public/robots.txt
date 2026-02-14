@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://draftly-self.vercel.app/sitemap.xml
