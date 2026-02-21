@@ -38,14 +38,14 @@ A block-based editor combined with aesthetics and Calendar integration. Create, 
     npm install
     ```
 
-2.  **Run Development Server**
-    ```bash
-    npm run dev
-    ```
-
-3.  **Build for Production**
+2. **Build for Production**
     ```bash
     npm run build
+    ``` 
+
+3.  **Run Development Server**
+    ```bash
+    npm run dev
     ```
 
 ## Usage Tips
