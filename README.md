@@ -16,7 +16,7 @@ A block-based editor combined with aesthetics and Calendar integration. Create, 
 - **Sync Capable**: Stubbed functionality to sync events to Google Calendar.
 
 ### 🎨 Theming & Customization
-- **Dark Mode**: Optimized "Absolute Black" (`#000000`) theme for OLED displays.
+- **Dark Mode**: Optimized "Absolute Black" (`#000000`) theme.
 - **Settings Modal**: Toggle themes and preferences via a dedicated settings UI.
 - **CSS Variables**: Extensive use of variables for consistent design tokens.
 
