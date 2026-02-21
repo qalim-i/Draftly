@@ -1,6 +1,6 @@
 # Draftly
 
-A powerful block-based editor combined with aesthetics and Calendar integration. Create, organize, and manage your notes with a beautiful, minimalist interface.
+A block-based editor combined with aesthetics and Calendar integration. Create, organize, and manage your notes with a beautiful, minimalist interface.
 
 ## Features
 
