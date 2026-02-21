@@ -30,7 +30,6 @@ A block-based editor combined with aesthetics and Calendar integration. Create, 
 - **Framework**: React + Vite
 - **Styling**: Vanilla CSS + CSS Modules
 - **State Management**: React Context (Theme) & Local State
-- **Icons**: Text/Emoji (minimalist approach)
 
 ## Getting Started
 
